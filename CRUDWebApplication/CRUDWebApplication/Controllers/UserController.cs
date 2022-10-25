@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using CRUDWebApplication.Data;
+using CRUDWebApplication.Domain.Entities;
 
 namespace CRUDWebApplication.Controllers
 {
@@ -60,7 +61,6 @@ namespace CRUDWebApplication.Controllers
             dbUser.cellPhone = request.cellPhone;
 
             await _context.SaveChangesAsync();
-
             return Ok(await _context.Users.ToListAsync());
         } 
 
