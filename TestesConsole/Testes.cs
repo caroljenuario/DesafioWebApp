@@ -3,12 +3,18 @@ using System;
 class Program {
   
   int total = 0; 
-  public void sum(int num){   
-    for (int i=1; i <= num;  i++) {
-      total = total + i;
+  public void sum(int num){ 
+    if(num>0) {
+      for (int i=1; i <= num;  i++) {
+        total = total + i;
     }
-    Console.WriteLine ("Soma->" +total);
-    Console.ReadKey();  
+      Console.WriteLine ("Soma->" +total);
+      Console.ReadKey();
+    }
+    else {
+      Console.WriteLine ("Digite um numero maior que zero.");
+    }
+      
   }
 
   public string Duplicates (string characters) { 
